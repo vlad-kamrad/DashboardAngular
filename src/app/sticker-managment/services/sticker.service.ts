@@ -30,7 +30,8 @@ export class StickerService{
 
     post(sticker: Sticker): number{
         let list = JSON.parse(localStorage.getItem(this.list_name));
-        sticker.Id = ++this.key;
+        sticker.Id = this.key++;
+        sticker.Name += ' ';
         sticker.CreateDate = new Date();
         list.push(sticker);
         localStorage.setItem(this.list_name, JSON.stringify(list));
