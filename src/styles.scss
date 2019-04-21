@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+// Доска стикеров
+.list-stickers{
+
+    display: flex;
+    justify-content: flex-start;
+    
+    .item-list{
+        padding: 5px;
+        word-wrap: break-word;
+        border: 1px solid black;
+        margin: 2px;
+        width: 250px;
+    }
+}
+.btn-sticker{
+    margin: 5px;
+    padding: 0px;
+    width: 75px;
+    height: 25px;
+}
+
+.textDate{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.body, html{
+    margin: 18px;
+}

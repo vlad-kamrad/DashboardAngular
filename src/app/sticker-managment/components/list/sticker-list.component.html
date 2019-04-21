@@ -1,0 +1,23 @@
+<div class="row" >
+    <input class="validate" [(ngModel)]="search">
+</div>
+<div class="conteiner ">    
+    <div class="container-fluid list-stickers">
+        <div class="" *ngFor="let sticker of list | search:search">
+            <div class="item-list">
+                <div>Id: {{ sticker.Id}}</div>
+                <div>{{ sticker.Name}}</div>
+                <div>
+                    <span class="textDate">Create date: {{ sticker.CreateDate | date:'dd/MM/yyyy HH:mm:ss'}} </span><br/>
+                    <span class="textDate">Last update date: {{ sticker.LastEditDate | date:'dd/MM/yyyy HH:mm:ss'}}</span>
+                </div>
+                <div>
+                    <button type="button" (click)="edit(sticker.Id)" class="btn btn-warning btn-sticker">Edit</button>
+                    <button type="button" (click)="delete(sticker.Id)" class="btn btn-danger btn-sticker">Delete</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <button type="button" (click)="add()" class="btn btn-primary">Add</button>
+</div>
